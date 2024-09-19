@@ -5,7 +5,6 @@ import { AxiosError } from "axios";
 export default function usePokemon(name:string) {
   // SWR
   const { data  , isLoading, mutate } = useSWR(name,async()=>{
-    // TRY-CATCH-BLOCK
     try{
       return await PokemonApi.getPokemon(name);
     }catch(error){
