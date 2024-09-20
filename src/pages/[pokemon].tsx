@@ -11,7 +11,7 @@ function PokemonDetailsPage() {
   const router = useRouter();
   const pokemonName = router.query.pokemon?.toString() || "";
 
-  // SWR
+  // SWR NEW CHANGE FOR VERSION 5
 
   //const { data : pokemon , isLoading:pokemonLoading } = useSWR(pokemonName,PokemonApi.getPokemon);
 
