@@ -1,6 +1,4 @@
 import { useRouter } from 'next/router'
-import useSWR from 'swr';
-import React, { FormEvent } from 'react'
 import * as PokemonApi from '@/network/pokemon-api'
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,6 +6,7 @@ import { Button, Form, Spinner } from 'react-bootstrap';
 import Image from 'next/image';
 import usePokemon from '@/hooks/usePokemon';
 import { FormEvent } from 'react';
+
 function PokemonDetailsPage() {
   const router = useRouter();
   const pokemonName = router.query.pokemon?.toString() || "";
